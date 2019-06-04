@@ -19,6 +19,7 @@
     <color rgba="0 1 0 1"/>
   </material>
 
+  <!-- robot -->
   <xacro:include filename="$(find rover_bot)/urdf/rover_bot.gazebo" />
 
   <link name="robot_footprint"></link>
@@ -237,6 +238,18 @@
         <origin xyz="0.2 0 0" rpy="0 0 0"/>
         <child link="camera"/>
         <parent link="chassis"/>
+    </joint>
+
+    <!-- rgbd camera -->
+
+    <link name="camera_rgbd_frame"/>
+
+    <!-- camera rgbd joint -->
+
+    <joint name="camera_rgbd_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
+      <child link="camera_rgbd_frame"/>
+      <parent link="camera"/>
     </joint>
 
     <!-- Laser Rangefinder link -->
