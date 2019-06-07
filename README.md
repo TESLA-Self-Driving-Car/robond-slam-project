@@ -38,3 +38,13 @@ $ roslaunch slam_project teleop.launch
 $ roslaunch slam_project mapping.launch
 $ roslaunch slam_project rviz.launch
 ```
+
+To use the cafe_dining.world instead, run:
+
+```
+$ cd ~/catkin_ws
+$ roslaunch slam_project world.launch world_file:=~/catkin_ws/src/slam_project/worlds/cafe_dining.world
+$ roslaunch slam_project teleop.launch
+$ roslaunch slam_project mapping.launch
+$ roslaunch slam_project rviz.launch
+```
