@@ -1,5 +1,9 @@
 #! /bin/bash
 
+# Run before launching anything to allow collision between vehicle and environment
+mkdir -p ~/.gazebo/
+curl -L https://s3-us-west-1.amazonaws.com/udacity-robotics/Term+2+Resources/P3+Resources/models.tar.gz | tar zx -C ~/.gazebo/
+
 echo ' '
 read -p 'Would you like to clear the previous map database? (y/n): ' ansinput
 

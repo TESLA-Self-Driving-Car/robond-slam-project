@@ -3,6 +3,8 @@ Robotics Nano-degree Term 2 Project 3: Map My World Robot.
 
 # Setup and Run
 
+## Step by step Execution
+
 Create catkin workspace
 
 ```
@@ -47,4 +49,11 @@ $ roslaunch slam_project world.launch world_file:=~/catkin_ws/src/slam_project/w
 $ roslaunch slam_project teleop.launch
 $ roslaunch slam_project mapping.launch
 $ roslaunch slam_project rviz.launch
+```
+
+## Single Script Execution
+
+```
+cd slam_project/script
+./rtab_run
 ```
